@@ -1,0 +1,4 @@
+local.properties
+libs/framework.jar
+bin/*
+gen/*

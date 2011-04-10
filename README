@@ -1,0 +1,11 @@
+Better Mail
+===========
+
+
+Better Mail is a simple application that I made because I was fed-up with the 
+bugs and limitations in the stock Android 1.6 Gmail application.
+
+The application's uses the mobile version of Gmail for its GUI (Like G-Wizz's 
+apps for iOS devices).  But also implements a Broadcast Receiver on gmail-ls to
+provide native Android push notifications. 
+ 

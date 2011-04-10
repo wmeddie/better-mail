@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory
+		 android:title="@string/prefs_notification_category">
+		<CheckBoxPreference
+		 	android:key="pref_show_notification" 
+			android:summary="@string/pref_summary_show_notifications" 
+			android:title="@string/pref_title_show_notification"
+			android:defaultValue="true">
+		</CheckBoxPreference>
+
+		<CheckBoxPreference 
+			android:key="pref_priority_inbox"
+			android:summary="@string/pref_summary_priority_inbox"
+			android:title="@string/pref_title_priority_inbox"
+			android:defaultValue="true">
+		</CheckBoxPreference>
+		
+		<CheckBoxPreference 
+			android:key="pref_vibrate" 
+			android:summary="@string/pref_sumary_vibrate" 
+			android:title="@string/pref_title_vibrate"
+			android:defaultValue="true">
+		</CheckBoxPreference>
+
+		<CheckBoxPreference 
+			android:key="pref_sound_notification" 
+			android:summary="@string/pref_summary_ringtone" 
+			android:title="@string/pref_title_ringtone"
+			android:defaultValue="true">
+		</CheckBoxPreference>
+
+		<CheckBoxPreference 
+			android:key="pref_led_notification" 
+			android:summary="@string/pref_summary_led" 
+			android:title="@string/pref_title_led"
+			android:defaultValue="true">
+		</CheckBoxPreference>
+		
+	</PreferenceCategory>
+	<PreferenceCategory
+		android:title="@string/prefs_quiet_category">
+		<CheckBoxPreference
+			android:key="pref_quiet_mode"
+			android:summary="@string/pref_summary_quiet_mode"
+			android:title="@string/pref_title_quiet_mode"
+			android:defaultValue="false">
+		</CheckBoxPreference>
+		<com.yumusoft.bettermail.TimePickerPreference
+			android:key="pref_quiet_start"
+			android:summary="@string/pref_summary_quiet_start"
+			android:title="@string/pref_title_quiet_start">
+		</com.yumusoft.bettermail.TimePickerPreference>
+		<com.yumusoft.bettermail.TimePickerPreference
+			android:key="pref_quiet_end"
+			android:summary="@string/pref_summary_quiet_end"
+			android:title="@string/pref_title_quiet_end">
+		</com.yumusoft.bettermail.TimePickerPreference>	
+	</PreferenceCategory>
+</PreferenceScreen>

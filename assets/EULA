@@ -1,0 +1,32 @@
+While BetterMail uses Google Inc.'s Gmail service it is in no way
+associated with Google Inc.  By clicking accept you acknowledge 
+that at any time Google may update Gmail or Android in a way that
+may render BetterMail unusable.
+
+Since BetterMail makes use of Google Inc.'s Gmail service you must
+also agree to Gmail's terms of service.
+
+Privacy Notice:
+
+BetterMail will only use your e-mail address to authenticate with
+Gmail and to show on-device notifications.  BetterMail does not
+collect any other type of personal information.
+
+Use of BetterMail is subject to Google Inc.'s Gmail privacy policies.
+
+License:
+
+Copyright (C) 2011 Eduardo Gonzalez
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.

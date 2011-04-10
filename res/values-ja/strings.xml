@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Preference Categories -->
+    <string name="pref_name">Better Mailの通知設定</string>
+	<string name="prefs_quiet_category">無声モード</string>
+	        
+    <!-- Preference Summaries -->
+	<string name="pref_summary_led">LEDでメール通知する</string>
+	<string name="pref_summary_ringtone">着信音で通知する</string>
+	<string name="pref_sumary_vibrate">バイブレーションでメール通知する</string>
+    <string name="pref_summary_show_notifications">メール通知機能をONする</string>
+	<string name="pref_summary_quiet_start">無声モード開始時間</string>
+	<string name="pref_summary_quiet_end">無声モード終了時間</string>
+	<string name="pref_summary_quiet_mode">着信音とバイブレーションを定時的にOFFにする</string>
+	<string name="pref_summary_priority_inbox">優先トレイのメールのみ通信する</string>
+
+	<!--  Preference Titles -->
+	<string name="pref_title_led">LED</string>
+	<string name="pref_title_ringtone">着信音</string>
+	<string name="pref_title_vibrate">バイブレーション</string>
+    <string name="pref_title_show_notification">メール着信通知</string>	
+    <string name="pref_title_quiet_start">無声モード開始</string>
+    <string name="pref_title_quiet_end">無声モード終了</string>
+	<string name="pref_title_quiet_mode">無声モード</string>
+	<string name="pref_title_priority_inbox">優先トレイ告知</string>
+
+	<!--  Dialog Strings -->	
+	<string name="dialog_button_yes">はい</string>
+	<string name="dialog_button_cancel">キャンセル</string>
+	<string name="dialog_button_ok">OK</string>
+	<string name="dialog_button_buy_now">ご購入へ</string>
+	<string name="dialog_button_quit">アプリ終了</string>
+	<string name="dialog_button_accept">同意する</string>
+	<string name="dialog_button_refuse">同意しない</string>
+	
+	<string name="dialog_external_link_message">ブラウザでリンクを開きます。よろしいですか？</string>
+	<string name="dialog_attachment_message">添付ファイルをダウンロードしますか？</string>
+	<string name="dialog_network_error_title">ネットワークエラー</string>
+	<string name="dialog_network_error_message">GMailのサーバーへの通信が出来ませんでした。</string>
+	<string name="dialog_no_account_title">Gmailの設定を取得失敗</string>
+	<string name="dialog_no_account_message">Googleのアカウントが携帯に登録されてないようです。メール通知機能は利用出来ません。登録した場合でもこのメッセージが表示した場合は「support@yumusoft.com」にご連絡ください。.</string>
+	<string name="dialog_first_run_title">BetterMailへようこそ</string>
+	<string name="dialog_first_run_message">現在、一つのアカウントのみ対応しますから、本体のメインとなるアカウントでログインしてください。</string>
+	<string name="dialog_eula_title">ライセンス条項</string>
+	
+	<!--  Menu Strings -->
+	<string name="menu_stop">停止</string>
+	<string name="menu_refresh">再読み込み</string>
+	<string name="menu_back">戻る</string>
+	<string name="menu_forward">進む</string>
+	<string name="menu_settings">設定</string>
+	<string name="menu_inbox">受信トレイ</string>
+	<string name="menu_help">ヘルプ</string>
+	
+	<!-- Notification Strings -->
+	<string name="notification_new_unread">未読メッセージが%d件あります。</string>
+	<string name="notification_unread_count">未読件数%dあります。</string>
+	
+</resources>
