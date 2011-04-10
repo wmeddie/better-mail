@@ -9,3 +9,10 @@ The application's uses the mobile version of Gmail for its GUI (Like G-Wizz's
 apps for iOS devices).  But also implements a Broadcast Receiver on gmail-ls to
 provide native Android push notifications. 
  
+ 
+Building
+--------
+
+Better Mail makes uses of Google's private APIs.  To build Better Mail you need
+to locate a suitable framework.jar and place it inside the libs directory.
+
