@@ -5,10 +5,13 @@ import android.app.Application;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
 import static com.yumusoft.bettermail.Globals.DEBUG;
+import static com.yumusoft.bettermail.Globals.GMAIL_2_3_5_VERSION;
 
 public class BetterMailApplication extends Application {
 	private GmailNotificationReceiver _receiver;
@@ -55,8 +58,22 @@ public class BetterMailApplication extends Application {
 		
 		boolean showNotifications = pref.getBoolean(prefKey, false);
 		
-		if (showNotifications) {
+		if (showNotifications && compatibleGmailVersion()) {
 			registerNotificationBroadcast();
 		}
+	}
+	
+	private boolean compatibleGmailVersion() {
+		PackageManager pm = getPackageManager();
+        try {
+        	int version = pm.getPackageInfo("com.google.android.gm", 0).versionCode;
+        	if (version < GMAIL_2_3_5_VERSION) {
+        		return true;
+        	}
+        } catch (NameNotFoundException e) {
+        	// No Gmail.  Notifications wont work anyway.
+        }
+        
+        return false;
 	}
 }
