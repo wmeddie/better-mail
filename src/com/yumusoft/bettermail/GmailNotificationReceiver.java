@@ -65,7 +65,7 @@ public class GmailNotificationReceiver extends BroadcastReceiver {
 			return;
 		}
 		
-		if (pref.getBoolean(stringFor(R.string.pref_show_notification), true)) {
+		if (pref.getBoolean(stringFor(R.string.pref_show_notification), false)) {
 			Notification notification = 
 				new Notification(R.drawable.stat_notify_email_generic, 
 						String.format(stringFor(

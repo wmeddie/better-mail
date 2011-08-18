@@ -2,12 +2,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 	<PreferenceCategory
 		 android:title="@string/prefs_notification_category">
-		<CheckBoxPreference
+		<com.yumusoft.bettermail.NotificationPreference
 		 	android:key="pref_show_notification" 
 			android:summary="@string/pref_summary_show_notifications" 
 			android:title="@string/pref_title_show_notification"
 			android:defaultValue="true">
-		</CheckBoxPreference>
+		</com.yumusoft.bettermail.NotificationPreference>
 
 		<CheckBoxPreference 
 			android:key="pref_priority_inbox"

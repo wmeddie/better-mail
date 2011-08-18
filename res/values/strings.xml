@@ -12,7 +12,7 @@
 	<string name="pref_summary_led">Flash the LED when new email arrives</string>
 	<string name="pref_summary_ringtone">Play the default notification ringtone when new email arrives</string>
 	<string name="pref_sumary_vibrate">Vibrate phone when new email arrives</string>
-    <string name="pref_summary_show_notifications">Show a notification when new email arrives</string>	
+    <string name="pref_summary_show_notifications">Show a notification when new email arrives.</string>	
 	<string name="pref_summary_quiet_start">When to start quiet mode</string>    
 	<string name="pref_summary_quiet_end">When to end quiet mode and return to normal notifications</string>
 	<string name="pref_summary_quiet_mode">Silence the sound and vibration notifications at night or at work</string>
@@ -60,6 +60,8 @@
 	<string name="dialog_first_run_title">Welcome to BetterMail</string>
 	<string name="dialog_first_run_message">Please log in to Gmail using the user name and password of your phone\'s main account.  (Only one account supported at this time).</string>
 	<string name="dialog_eula_title">EULA and Terms</string>
+	<string name="dialog_incompatible_gmail_title">Incompatible Gmail</string>
+	<string name="dialog_incompatible_gmail_message">The Gmail version installed is not compatible with Better Mail\'s notifications. Notification settings will be disabled.</string>
 	
 	<!--  Menu Strings -->
 	<string name="menu_stop">Stop</string>

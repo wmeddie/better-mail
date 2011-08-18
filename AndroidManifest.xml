@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.yumusoft.bettermail"
-      android:versionCode="3" 
-      android:versionName="1.1">
+      android:versionCode="4" 
+      android:versionName="1.2">
     
     <application 
+    	android:name=".BetterMailApplication"
     	android:icon="@drawable/icon" 
-    	android:label="@string/app_name" android:debuggable="false">
+    	android:label="@string/app_name" 
+    	android:debuggable="true">
         
         <activity 
         	android:name="com.yumusoft.bettermail.BetterMailActivity"
@@ -19,23 +21,33 @@
             </intent-filter>
         </activity>
 
+		<!-- Registers the NotificationReceiver if needed. -->
+		<receiver android:name=".BootReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+		
+		<!-- 
 		<receiver 
 			android:icon="@drawable/icon" 
 			android:name="com.yumusoft.bettermail.GmailNotificationReceiver" 
 			android:label="@string/receiver_name" 
 			android:enabled="true">
-			
-			<!-- Android 2.2? -->
+
+			<!- Android 2.2? ->
 			<intent-filter>
                 <action android:name="android.intent.action.PROVIDER_CHANGED"
                     android:priority="-10">
                 </action>
-                <data android:scheme="content" android:host="gmail-ls"
+                <data 
+                	android:scheme="content" 
+                	android:host="gmail-ls"
                     android:pathPattern="/unread/.*">
                 </data>
             </intent-filter>
-			
-			<!--  Android 1.6 -->
+			 
+			<!-  Android 1.6 ->
 			<intent-filter>
 				<action
 					android:name="android.intent.action.PROVIDER_CHANGED"
@@ -48,7 +60,9 @@
 	            	android:path="/unread/^i">
 				</data>
 			</intent-filter>
+			
 		</receiver>
+		-->
 		
 		<activity 
 			android:name="com.yumusoft.bettermail.BetterMailPreferences" 
@@ -59,10 +73,10 @@
 </application>
     
     <uses-sdk android:minSdkVersion="4" />
-
+	
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
 	<uses-permission android:name="com.google.android.gm.permission.READ_GMAIL"></uses-permission>
-	<uses-permission android:name="com.google.android.gm.permission.WRITE_GMAIL"></uses-permission>
 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 	<uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH"></uses-permission>
     <uses-permission android:name="com.google.android.providers.gmail.permission.READ_GMAIL"></uses-permission>

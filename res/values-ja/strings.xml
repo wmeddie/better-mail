@@ -8,7 +8,7 @@
 	<string name="pref_summary_led">LEDでメール通知する</string>
 	<string name="pref_summary_ringtone">着信音で通知する</string>
 	<string name="pref_sumary_vibrate">バイブレーションでメール通知する</string>
-    <string name="pref_summary_show_notifications">メール通知機能をONする</string>
+    <string name="pref_summary_show_notifications">メール通知機能をONする。</string>
 	<string name="pref_summary_quiet_start">無声モード開始時間</string>
 	<string name="pref_summary_quiet_end">無声モード終了時間</string>
 	<string name="pref_summary_quiet_mode">着信音とバイブレーションを定時的にOFFにする</string>
@@ -42,6 +42,8 @@
 	<string name="dialog_first_run_title">BetterMailへようこそ</string>
 	<string name="dialog_first_run_message">現在、一つのアカウントのみ対応しますから、本体のメインとなるアカウントでログインしてください。</string>
 	<string name="dialog_eula_title">ライセンス条項</string>
+	<string name="dialog_incompatible_gmail_title">Gmailのバーション非対応</string>
+	<string name="dialog_incompatible_gmail_message">現在インストールされているGmailがベターメールの告知システムに異常があるため、メール告知の設定がOFFに設定し変更不可能されています。</string>
 	
 	<!--  Menu Strings -->
 	<string name="menu_stop">停止</string>
