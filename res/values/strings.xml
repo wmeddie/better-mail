@@ -75,4 +75,8 @@
 	<!-- Notification Strings -->
 	<string name="notification_new_unread">%d new messages</string>
 	<string name="notification_unread_count">%d unread messages</string>
+	
+	<!-- UI Strings -->
+	<string name="loading">Loading...</string>
+	
 </resources>

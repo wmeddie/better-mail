@@ -24,6 +24,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.webkit.CookieSyncManager;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -50,7 +51,10 @@ public class BetterMailActivity extends Activity implements OnEulaAgreedTo {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        requestWindowFeature(Window.FEATURE_PROGRESS);
+        
+        getWindow().setFeatureInt(Window.FEATURE_PROGRESS, 
+        		Window.PROGRESS_VISIBILITY_ON);
         
         CookieSyncManager.createInstance(this);
         CookieSyncManager.getInstance().startSync();
@@ -68,6 +72,7 @@ public class BetterMailActivity extends Activity implements OnEulaAgreedTo {
         _webView.setVerticalScrollBarEnabled(false);
 
         _webView.setWebViewClient(new NonRedirectingWebViewClient());
+        _webView.setWebChromeClient(new ProgressObervingChromeClient());
         
         _webView.loadUrl(GMAIL_URL);
         
@@ -480,6 +485,18 @@ public class BetterMailActivity extends Activity implements OnEulaAgreedTo {
 					showDialog(ERROR_DIALOG_ID);
 				}
     		});
+    	}
+    }
+    
+    private class ProgressObervingChromeClient extends WebChromeClient {
+    	@Override
+    	public void onProgressChanged(WebView view, int progress) {
+    		setTitle(R.string.loading);
+    		setProgress(progress * 100); // 0~10000
+    		
+    		if (progress == 100) {
+    			setTitle(R.string.app_name);
+    		}
     	}
     }
 }
