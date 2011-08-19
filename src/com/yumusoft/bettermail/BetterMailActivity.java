@@ -91,7 +91,7 @@ public class BetterMailActivity extends Activity implements OnEulaAgreedTo {
     			String[] accounts = data.getExtras().getStringArray("accounts");
     			if (accounts[0] != null) {
     				if (DEBUG) 
-    					Log.d("BetterGmail", "Got Username: " + accounts[0]);
+    					Log.d("BetterMail", "Got Username: " + accounts[0]);
     				
     				SharedPreferences pref = 
     					PreferenceManager.getDefaultSharedPreferences(this);
@@ -106,7 +106,7 @@ public class BetterMailActivity extends Activity implements OnEulaAgreedTo {
     		} 
     	} catch (Exception e) {
     		showDialog(ACCOUNT_ERROR_DIALOG_ID);
-    		Log.e("BetterGmail", "Unable to access Gmail account password.");
+    		Log.e("BetterMail", "Unable to access Gmail account username.");
     	}
     }
 
@@ -134,7 +134,7 @@ public class BetterMailActivity extends Activity implements OnEulaAgreedTo {
     	AlertDialog.Builder builder;
     	
     	if (DEBUG)
-    		Log.d("BetterGmail", "Creating Dialog:" + id);
+    		Log.d("BetterMail", "Creating Dialog:" + id);
     	
     	switch (id) {
     	case EXTERNAL_LINK_DIALOG_ID:
@@ -216,7 +216,7 @@ public class BetterMailActivity extends Activity implements OnEulaAgreedTo {
     		break;
     	default:
     		if (DEBUG)
-    			Log.w("BetterGmail", "Invalid Dialog.");
+    			Log.w("BetterMail", "Invalid Dialog.");
     		dialog = null;
     	}
     	
@@ -448,7 +448,7 @@ public class BetterMailActivity extends Activity implements OnEulaAgreedTo {
     			setIsLoading(true);
     			
     			if (DEBUG)
-    				Log.d("BetterGmail", url);
+    				Log.d("BetterMail", url);
     			
     			// Download attachments.
     			if (url.contains("?view=att")) {
@@ -462,7 +462,7 @@ public class BetterMailActivity extends Activity implements OnEulaAgreedTo {
     		} else {
     			// Open external links in Browser activity.
     			if (DEBUG)
-    				Log.d("BeterGmail", url);
+    				Log.d("BeterMail", url);
     			
     			setUrl(url);
     			showDialog(EXTERNAL_LINK_DIALOG_ID);
