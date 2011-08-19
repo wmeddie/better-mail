@@ -28,7 +28,7 @@ public class GmailNotificationReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		if (DEBUG) Log.d("BetterGmailReceiver", "Unread Count Changed");
+		if (DEBUG) Log.d("BetterMailReceiver", "Unread Count Changed");
 
 		SharedPreferences pref = 
 			PreferenceManager.getDefaultSharedPreferences(context);
@@ -42,19 +42,25 @@ public class GmailNotificationReceiver extends BroadcastReceiver {
 					Context.NOTIFICATION_SERVICE);
 		nm.cancel(0);
 		
-		String unread = checkUnread(prefPriorityInbox(pref));
+		String unread = null;
+		try {
+			unread = checkUnread(prefPriorityInbox(pref));
+		} catch (Throwable e) {
+			// TODO: Need to find out why this fails sometimes.
+		}
+		
 		if (unread == null) {
 			return;
 		}
 		
 		int unreadCount = Integer.parseInt(unread);
 		
-		if (DEBUG) Log.d("BetterGmailReceiver", "Unread Count: " + unreadCount);
+		if (DEBUG) Log.d("BetterMailReceiver", "Unread Count: " + unreadCount);
 
 		
 		int lastUnreadCount = pref.getInt("lastUnreadCount", 0);
 		if (DEBUG) 
-			Log.d("BetterGmailReceiver", "Last Unread Count: " + 
+			Log.d("BetterMailReceiver", "Last Unread Count: " + 
 					lastUnreadCount);
 		
 		SharedPreferences.Editor editor = pref.edit();
@@ -195,7 +201,8 @@ public class GmailNotificationReceiver extends BroadcastReceiver {
 		ContentResolver contentResolver = _context.getContentResolver();
 		
 		Uri labelsUri = Uri.parse("content://gmail-ls/labels/");
-		Uri accountUri = Uri.withAppendedPath(labelsUri, _account);
+		// Crash reports here... Need to find out why.
+		Uri accountUri = Uri.withAppendedPath(labelsUri, _account); 
 	    	    
 		Cursor cursor = contentResolver.query(accountUri, null, null, null, 
 				null);
