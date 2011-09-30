@@ -103,9 +103,7 @@ public class BetterMailActivity extends Activity implements OnEulaAgreedTo {
     				editor.commit();
     				
     			}
-    		} 
-    		//　日本語
-    		
+    		} 	
     	} catch (Exception e) {
     		showDialog(ACCOUNT_ERROR_DIALOG_ID);
     		Log.e("BetterMail", "Unable to access Gmail account username.");
